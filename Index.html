@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WBO Tech Suite - Welcome</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%);
+            color: #212529;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Figtree', sans-serif;
+            font-weight: 700;
+        }
+        
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        /* Sidebar Navigation */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 240px;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 2px 0 24px rgba(0, 0, 0, 0.08);
+            padding: 2rem 0;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+        
+        .sidebar-logo {
+            padding: 0 1.5rem 1.5rem;
+            border-bottom: 2px solid rgba(0, 102, 204, 0.1);
+            margin-bottom: 1.5rem;
+        }
+        
+        .sidebar-logo h3 {
+            color: #0066CC;
+            font-size: 1.1rem;
+            font-weight: 800;
+        }
+        
+        .nav-links {
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin: 0;
+        }
+        
+        .nav-links a {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            color: #495057;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(0, 102, 204, 0.05);
+            color: #0066CC;
+            border-left-color: #0066CC;
+        }
+        
+        /* Main Content */
+        .main-content {
+            margin-left: 240px;
+            flex: 1;
+            padding: 0;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: url('https://globalroche.monday.com/generated_static/9743496/sidekick-attachments/3cb6db22-5c5b-4f98-a312-1cffc1a962ec.png') center center / cover no-repeat;
+            color: #212529;
+            padding: 4rem 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.35);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            color: #0066CC;
+            text-shadow: 0 1px 3px rgba(255,255,255,0.8);
+        }
+        
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            color: #212529;
+        }
+        
+        .hero .description {
+            font-size: 1rem;
+            color: #495057;
+            line-height: 1.7;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        section h2 {
+            font-size: 2rem;
+            color: #0066CC;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+        
+        section h3 {
+            font-size: 1.4rem;
+            color: #212529;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+            font-weight: 700;
+        }
+        
+        /* Glass Card */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 102, 204, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        }
+        
+        /* Three Column Grid */
+        .three-col-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .col-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 102, 204, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .col-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        }
+        
+        .col-card h4 {
+            font-size: 1.2rem;
+            color: #0066CC;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .col-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .col-card li {
+            padding: 0.4rem 0;
+            color: #495057;
+            font-size: 0.9rem;
+        }
+        
+        .col-card li::before {
+            content: '→ ';
+            color: #0097A7;
+            font-weight: bold;
+        }
+        
+        /* Quote Box */
+        .quote-box {
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.05) 0%, rgba(0, 151, 167, 0.05) 100%);
+            border-left: 4px solid #0066CC;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+            font-style: italic;
+            color: #212529;
+        }
+        
+        /* Announcements */
+        .announcement-card {
+            background: rgba(255, 243, 205, 0.9);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 193, 7, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .announcement-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 28px rgba(0, 0, 0, 0.12);
+        }
+        
+        .announcement-card strong {
+            color: #0066CC;
+            font-weight: 600;
+        }
+        
+        /* AI Sidekick Section - Compact */
+        .ai-section {
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.05) 0%, rgba(0, 151, 167, 0.05) 100%);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .ai-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .ai-intro {
+            font-size: 0.95rem;
+            color: #495057;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .prompt-examples {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .prompt-bubble {
+            background: white;
+            border: 1px solid rgba(0, 102, 204, 0.2);
+            border-radius: 20px;
+            padding: 0.6rem 1.2rem;
+            font-size: 0.85rem;
+            color: #495057;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+        
+        .ai-benefits {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: #495057;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.8rem;
+            background: #0066CC;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+        
+        .btn:hover {
+            background: #0052A3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0, 102, 204, 0.3);
+        }
+        
+        .btn-secondary {
+            background: #0097A7;
+        }
+        
+        .btn-secondary:hover {
+            background: #00838F;
+        }
+        
+        /* Video Cards */
+        .video-grid {
+            display: grid;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .video-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 102, 204, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            border-color: #0066CC;
+        }
+        
+        .play-icon {
+            font-size: 2.5rem;
+            color: #0066CC;
+            flex-shrink: 0;
+        }
+        
+        .video-content {
+            flex: 1;
+        }
+        
+        .video-title {
+            font-weight: 600;
+            color: #212529;
+            margin-bottom: 0.3rem;
+            font-size: 1rem;
+        }
+        
+        .video-label {
+            color: #0097A7;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        /* Resource Cards */
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .resource-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 102, 204, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+            border-color: #0066CC;
+        }
+        
+        .resource-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .resource-title {
+            font-weight: 600;
+            color: #0066CC;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .resource-desc {
+            color: #495057;
+            font-size: 0.9rem;
+        }
+        
+        /* Roadmap */
+        .roadmap-card {
+            background: rgba(255, 243, 205, 0.9);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 193, 7, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .roadmap-card h4 {
+            color: #0066CC;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .roadmap-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .roadmap-card li {
+            padding: 0.5rem 0;
+            color: #495057;
+        }
+        
+        .roadmap-card li::before {
+            content: '✓ ';
+            color: #0097A7;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .sub-bullet {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .consideration-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 102, 204, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .consideration-card h4 {
+            color: #0066CC;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .consideration-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .consideration-card li {
+            padding: 0.5rem 0;
+            color: #495057;
+        }
+        
+        .consideration-card li::before {
+            content: '💡 ';
+            margin-right: 0.5rem;
+        }
+        
+        /* Support Section */
+        .support-steps {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(0, 102, 204, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .support-steps ol {
+            padding-left: 1.5rem;
+        }
+        
+        .support-steps li {
+            padding: 0.8rem 0;
+            color: #495057;
+            font-size: 1rem;
+        }
+        
+        .support-steps a {
+            color: #0066CC;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .support-steps a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 2rem 3rem;
+            text-align: center;
+            color: #495057;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(0, 102, 204, 0.1);
+            margin-left: 240px;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            footer {
+                margin-left: 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            section {
+                padding: 2rem 1.5rem;
+            }
+            
+            .three-col-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .resource-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-logo">
+                <h3>🌍 WBO Tech Suite</h3>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#what-is">What is WBO?</a></li>
+                <li><a href="#workspace">Workspace</a></li>
+                <li><a href="#ai-sidekick">AI Sidekick</a></li>
+                <li><a href="#announcements">Announcements</a></li>
+                <li><a href="#knowledge">Tutorials</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#support">Support</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>🌍 Welcome to the WBO Tech Suite</h1>
+                    <p class="subtitle">Your Global Platform for Working by Outcomes at Roche Pharma International</p>
+                    <p class="description">Whether you're brand new to monday.com or a returning user, you're in the right place. This page is your single reference point for everything you need to navigate, contribute, and get the most out of the WBO Tech Suite.</p>
+                </div>
+            </section>
+            
+            <!-- What is WBO Section -->
+            <section id="what-is">
+                <h2>What is the WBO Tech Suite?</h2>
+                <div class="glass-card">
+                    <p><strong>Working By Outcomes (WBO)</strong> is Roche Pharma International's continuous planning and delivery method. It helps teams prioritize, learn, and collectively strive for maximum patient impact. An Outcome represents the impact, value, or benefit that our work ultimately creates — not the activity itself.</p>
+                    <p style="margin-top: 1rem;">The <strong>WBO Tech Suite</strong> is the technology platform that makes this framework live and actionable. It replaces a fragmented ecosystem of Google Slides, Sheets, Trello, and Tableau with a single "one source of truth" on monday.com.</p>
+                </div>
+                <div class="quote-box">
+                    💡 The Tech Suite is not just another tool — it's your engine for growth and global collaboration.
+                </div>
+            </section>
+            
+            <!-- Workspace Organization -->
+            <section id="workspace">
+                <h2>How the Workspace is Organized</h2>
+                <div class="three-col-grid">
+                    <div class="col-card">
+                        <h4>🏢 Regional Boards (50+ Affiliates)</h4>
+                        <p style="margin-bottom: 1rem; color: #495057; font-size: 0.9rem;">Each country has its own Work Package Overview board where local teams manage their active, ongoing, and completed WPs:</p>
+                        <ul>
+                            <li><strong>EMEA:</strong> Germany, Greece, Poland, UK, Spain, Italy, France, Netherlands</li>
+                            <li><strong>APAC:</strong> Australia, Singapore, South Korea, Taiwan, Hong Kong</li>
+                            <li><strong>LATAM:</strong> Argentina, Colombia, CCAV</li>
+                            <li><strong>Africa:</strong> Ghana, Nigeria, South Africa</li>
+                            <li><strong>Global clusters:</strong> COMET, iNET</li>
+                        </ul>
+                    </div>
+                    <div class="col-card">
+                        <h4>🏆 Outcomes</h4>
+                        <ul>
+                            <li><strong>Short Term Outcomes (STO)</strong> — Immediate deliverables within a cycle</li>
+                            <li><strong>Mid Term Outcomes (MTO)</strong> — Medium-horizon strategic objectives</li>
+                            <li><strong>Long Term Outcomes (LTO)</strong> — Long-range strategic goals</li>
+                            <li><strong>Cycle Learning [Global]</strong> — Retrospectives and captured learnings</li>
+                        </ul>
+                    </div>
+                    <div class="col-card">
+                        <h4>🗄️ Repository & Workflows</h4>
+                        <p style="margin-bottom: 1rem; color: #495057; font-size: 0.9rem;">Reference boards that power automations and data consistency:</p>
+                        <ul>
+                            <li>Countries + Codes</li>
+                            <li>Disease Area</li>
+                            <li>Product</li>
+                            <li>Function</li>
+                            <li>Area</li>
+                            <li>Workflow boards for automated routing, subitem creation, and outcome management</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- AI Sidekick - Compact -->
+            <section id="ai-sidekick">
+                <div class="ai-section">
+                    <h2>🤖 Meet Your AI Sidekick</h2>
+                    <p class="ai-intro">Every board in the WBO Tech Suite comes with an AI-powered Sidekick — an intelligent assistant that helps you analyze data, generate reports, update work packages, and surface insights instantly.</p>
+                    
+                    <div class="prompt-examples">
+                        <div class="prompt-bubble">💬 "Show me all WPs at risk in my region"</div>
+                        <div class="prompt-bubble">💬 "Create a summary report of WPs by disease area"</div>
+                    </div>
+                    
+                    <div class="ai-benefits">
+                        <div class="benefit-item">⚡ Instant insights across all work packages</div>
+                        <div class="benefit-item">📊 Generate reports in seconds</div>
+                        <div class="benefit-item">🎯 Smart recommendations for your board</div>
+                    </div>
+                    
+                    <a href="https://docs.google.com/presentation/d/198XfMCDY6wZZEh1LKHWeQuuhjS0lVEinRJXgh4_FeVs/edit?slide=id.p1#slide=id.p1" target="_blank" class="btn">📋 View Full Prompt Library →</a>
+                </div>
+            </section>
+
+            <!-- Announcements -->
+            <section id="announcements">
+                <h2>Announcements</h2>
+                
+                <h3>🎉 Recent Updates</h3>
+                <div class="announcement-card">
+                    <strong>[Affiliate] Outcome Overviews</strong> — All regional boards now follow a unified structure with consistent column order, subitems, work packages, and status labels across all affiliates
+                </div>
+                <div class="announcement-card">
+                    <strong>NEW: Reuse Work Packages from the CLT Board</strong> — You can now reuse existing Work Packages directly from the CLT board, saving time on WP setup.
+                    <div style="margin-top: 1rem;">
+                        <a href="https://docs.google.com/presentation/d/1KYDRPf6L47uajrFbbfSrq4BgUOsU1loRFZW8nb4ft0k/edit?slide=id.p#slide=id.p" target="_blank" class="btn">📄 See presentation →</a>
+                    </div>
+                </div>
+                
+                <h3>📅 Upcoming Events</h3>
+                <div class="glass-card">
+                    <strong>Monthly WBO Tech Suite SU Meeting</strong> — Join the global team for Q&A sessions and best practice sharing on <strong>July 28th, 12:30 pm CET</strong>
+                </div>
+            </section>
+            
+            <!-- Knowledge Base & Resources -->
+            <section id="knowledge">
+                <h2>Knowledge Base & Resources</h2>
+
+                <div class="glass-card" style="display:flex; align-items:center; justify-content:space-between; padding: 1rem 1.5rem; margin-bottom: 1.5rem;">
+                    <div>
+                        <strong style="color:#0066CC;">📚 WBO Knowledge Base</strong>
+                        <span style="color:#495057; font-size:0.9rem; margin-left:0.75rem;">— Curated articles, guides & resources for the Tech Suite</span>
+                    </div>
+                    <a href="https://globalroche.monday.com/boards/5094113319" target="_blank" class="btn" style="white-space:nowrap; margin-left:1rem; font-size:0.85rem; padding:0.5rem 1.1rem;">Open Knowledge Base →</a>
+                </div>
+                
+                <h3>🎥 Tutorial Videos (Cornerstone)</h3>
+                <div class="video-grid" style="gap: 0.6rem;">
+                    <a href="https://roche.csod.com/ui/lms-learning-details/app/course/e1bdfd82-659c-4a1d-aa92-c81691cf3ffc" target="_blank" class="video-card" style="padding: 0.9rem 1.2rem;">
+                        <div class="play-icon" style="font-size:1.6rem;">▶️</div>
+                        <div class="video-content">
+                            <div class="video-title" style="font-size:0.88rem;">Introduction to the Tech Suite: What It Is and How to Navigate It (Including monday.com)</div>
+                            <div class="video-label" style="font-size:0.78rem;">Watch on Cornerstone →</div>
+                        </div>
+                    </a>
+                    
+                    <a href="https://roche.csod.com/ui/lms-learning-details/app/course/cdf39fbd-bfe4-4ff8-b517-00c7705bf2b8" target="_blank" class="video-card" style="padding: 0.9rem 1.2rem;">
+                        <div class="play-icon" style="font-size:1.6rem;">▶️</div>
+                        <div class="video-content">
+                            <div class="video-title" style="font-size:0.88rem;">Viewing and Updating Outcomes: How to Access, Subscribe, and Add Progress Signals</div>
+                            <div class="video-label" style="font-size:0.78rem;">Watch on Cornerstone →</div>
+                        </div>
+                    </a>
+                    
+                    <a href="https://roche.csod.com/ui/lms-learning-details/app/course/a20fd30b-4a3d-4fec-afa9-c9be5003dd0f" target="_blank" class="video-card" style="padding: 0.9rem 1.2rem;">
+                        <div class="play-icon" style="font-size:1.6rem;">▶️</div>
+                        <div class="video-content">
+                            <div class="video-title" style="font-size:0.88rem;">Creating and Managing Outcomes as an Outcome Owner (Linking LTO/MTO/STO) and Defining HWWK</div>
+                            <div class="video-label" style="font-size:0.78rem;">Watch on Cornerstone →</div>
+                        </div>
+                    </a>
+                    
+                    <a href="https://roche.csod.com/ui/lms-learning-details/app/course/4f0bb77f-0ec2-4c31-91cb-23c6b28c330a" target="_blank" class="video-card" style="padding: 0.9rem 1.2rem;">
+                        <div class="play-icon" style="font-size:1.6rem;">▶️</div>
+                        <div class="video-content">
+                            <div class="video-title" style="font-size:0.88rem;">Managing Work Packages as a Work Package Owner: Initiating Work Packages, Linking Outcomes, and Adding Milestones</div>
+                            <div class="video-label" style="font-size:0.78rem;">Watch on Cornerstone →</div>
+                        </div>
+                    </a>
+                    
+                    <a href="https://roche.csod.com/ui/lms-learning-details/app/course/14825638-3880-4e68-8b70-f5aab3a9b760" target="_blank" class="video-card" style="padding: 0.9rem 1.2rem;">
+                        <div class="play-icon" style="font-size:1.6rem;">▶️</div>
+                        <div class="video-content">
+                            <div class="video-title" style="font-size:0.88rem;">Collaborating as a Work Package Team Member: Updating Tasks, Adding Comments, and Marking Milestones Complete</div>
+                            <div class="video-label" style="font-size:0.78rem;">Watch on Cornerstone →</div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            
+            <!-- Roadmap -->
+            <section id="roadmap">
+                <h2>What's Coming Next</h2>
+                
+                <div class="roadmap-card">
+                    <h4>🔮 In Development — Deadline: July 20th, 2026</h4>
+                    <ul>
+                        <li><strong>Access Management</strong> — Create an easy way to control access to the WBO Suite
+                            <div class="sub-bullet">
+                                Take action and start preparing your Affiliate for the change, following the steps from our presentation
+                                <div style="margin-top: 0.5rem;">
+                                    <a href="https://docs.google.com/presentation/d/1RJgw_Zick6ctvNbhmqPytT0QpJ64Hf5NYqjDvpsL2iQ/edit?slide=id.p#slide=id.p" target="_blank" class="btn" style="font-size: 0.85rem; padding: 0.5rem 1rem;">📎 View Presentation →</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="consideration-card">
+                    <h4>💡 Under Consideration</h4>
+                    <ul>
+                        <li><strong>Collaboration Spaces</strong> — Dedicated areas for cross-regional project collaboration</li>
+                        <li><strong>Custom Reporting Builder</strong> — Create and save personalized report templates</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- External Resources -->
+            <section id="resources">
+                <h2>External Resources</h2>
+                <div class="resource-grid">
+                    <a href="https://docs.google.com/presentation/d/1fGtqwNsh3bdde9Tya_mmgza8WLmoDMogDDV3Q-G3aQ0/edit?slide=id.g24478ddaa5d_1_46#slide=id.g24478ddaa5d_1_46" target="_blank" class="resource-card">
+                        <div class="resource-icon">📗</div>
+                        <div class="resource-title">WBO Playbook 2.0</div>
+                        <div class="resource-desc">The comprehensive WBO framework guide (both for newcomers and experienced users)</div>
+                    </a>
+                    
+                    <a href="https://sites.google.com/roche.com/pi-wbo-fluidity/home" target="_blank" class="resource-card">
+                        <div class="resource-icon">🌐</div>
+                        <div class="resource-title">Pharma International WBO gSite</div>
+                        <div class="resource-desc">Additional resources and communications</div>
+                    </a>
+                    
+                    <a href="https://sites.google.com/roche.com/pi-wbo-fluidity/wbo-tech-suite/communications" target="_blank" class="resource-card">
+                        <div class="resource-icon">🔗</div>
+                        <div class="resource-title">ACE Link Articles</div>
+                        <div class="resource-desc">Tips for common challenges</div>
+                    </a>
+                </div>
+            </section>
+            
+            <!-- Support & Contacts -->
+            <section id="support">
+                <h2>Support & Contacts</h2>
+                <div class="support-steps">
+                    <ol>
+                        <li><strong>Step 1:</strong> Check this page first — most common questions are answered here</li>
+                        <li><strong>Step 2:</strong> Ask the AI Sidekick — type your question directly in the board chat</li>
+                        <li><strong>Step 3:</strong> Find your Super User — each country has a designated Tech Suite expert (<a href="https://globalroche.monday.com/boards/5093675056" target="_blank">view Super User list</a>)</li>
+                    </ol>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        Last updated: July 2026 | WBO Tech Suite — Roche Pharma International
+    </footer>
+</body>
+</html>
