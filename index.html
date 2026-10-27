@@ -3,17 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <meta name="description" content="Your single reference point for the WBO Tech Suite at Roche Pharma International: workspace, strategy documents, AI Sidekick, tutorials and support.">
+
 <title>WBO Tech Suite - Welcome</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&family=Poppins:wght@300;400;500;600&display=swap">
 <style>
 :root{--blue:#0066CC;--blue-d:#0052A3;--teal:#008080;--plum:#42275A;--text:#212529;--muted:#495057;--soft:#6c757d;--line:rgba(0,102,204,.12);--shadow:0 4px 24px rgba(0,0,0,.08)}
+
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:1rem}
 body{font-family:'Poppins',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;background:linear-gradient(135deg,#F8F9FA,#E9ECEF);color:var(--text);line-height:1.6}
+
 h1,h2,h3,h4{font-family:'Figtree','Segoe UI',Arial,sans-serif;font-weight:700}
+
 a{color:var(--blue)}
 a:focus-visible,.btn:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
 .sidebar{position:fixed;inset:0 auto 0 0;width:240px;background:rgba(255,255,255,.95);box-shadow:2px 0 24px rgba(0,0,0,.08);padding:2rem 0;overflow-y:auto;z-index:1000}
@@ -28,14 +34,23 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--blue);outline-offset:
 .hero h1{font-size:3rem;font-weight:800;color:var(--blue);margin-bottom:1rem}
 .subtitle{font-size:1.3rem;font-weight:600;margin-bottom:1.5rem}
 .hero p:last-child{color:var(--muted);line-height:1.7}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.doc-search{display:flex;align-items:center;gap:1rem;padding:.8rem 1.5rem;background:#fff;border-top:1px solid rgba(0,0,0,.06)}
+.doc-search input{flex:1;max-width:420px;padding:.6rem .9rem;border:1.5px solid rgba(0,102,204,.3);border-radius:8px;font:400 .9rem 'Poppins',sans-serif}
+.doc-search input:focus{outline:3px solid rgba(0,102,204,.25);border-color:var(--blue)}
+.doc-search span{font-size:.8rem;color:var(--soft)}
+.doc-none{padding:1rem 1.5rem;color:var(--soft);font-style:italic;font-size:.9rem}
 section.block{padding:3rem;max-width:1200px;margin:0 auto}
 h2{font-size:2rem;color:var(--blue);margin-bottom:1.5rem;font-weight:800}
 h3{font-size:1.4rem;margin:2rem 0 1rem}
 .card{background:rgba(255,255,255,.92);box-shadow:var(--shadow);border:1px solid var(--line);border-radius:12px;padding:1.5rem;margin-bottom:1.5rem;transition:transform .3s,box-shadow .3s}
 .card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,0,0,.12)}
+
 .card.static:hover{transform:none;box-shadow:var(--shadow)}
 .card h4{font-size:1.2rem;color:var(--blue);margin-bottom:1rem}
+
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-bottom:1.5rem}
+
 .grid .card{margin:0}
 .arrows{list-style:none}
 .arrows li{padding:.4rem 0;color:var(--muted);font-size:.9rem}
@@ -44,30 +59,45 @@ h3{font-size:1.4rem;margin:2rem 0 1rem}
 .mena{background:linear-gradient(135deg,rgba(252,180,0,.12),rgba(252,180,0,.04));border:1px solid rgba(252,180,0,.45);border-radius:14px;padding:2rem;margin-top:1.5rem}
 .mena h3{margin:0;font-size:1.35rem;color:var(--blue)}
 .mena small{color:var(--soft);font-weight:500}
+
 .mena p{color:var(--muted);margin:1rem 0}
+
 .btn{display:inline-block;padding:.8rem 1.6rem;background:var(--blue);color:#fff;text-decoration:none;border-radius:8px;font-weight:600;font-size:.95rem;transition:all .3s}
 .btn:hover{background:var(--blue-d);transform:translateY(-2px)}
 .btn.amber{background:#FCB400;color:#1a1a1a;font-weight:700}
 .btn.amber:hover{background:#e5a200}
 
+
 /* Strategic documents */
+
 .docs{background:rgba(255,255,255,.92);box-shadow:var(--shadow);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+
 .docs-title{background:linear-gradient(135deg,var(--blue),var(--plum));color:#fff;padding:1.25rem 2rem}
 .docs-title h2{color:#fff;font-size:1.3rem;margin:0}
 .docs-title p{font-size:.85rem;opacity:.9}
 .dc{display:grid;grid-template-columns:1fr 1fr}
 .dc>div{border-bottom:1px solid rgba(0,0,0,.06)}
 .dc h3{margin:0;padding:1rem;text-align:center;color:#fff;font-size:1.5rem;letter-spacing:.08em}
+
 .dc .sub{padding:.7rem 1rem;text-align:center;font-size:.88rem;font-weight:500}
+
 .dc ul{list-style:none}
+
 .dc li{padding:.9rem 1.5rem;font-size:.88rem;border-top:1px solid rgba(0,0,0,.06)}
+
 .t-dacs h3{background:var(--teal)}.t-dacs .sub{background:#f0fafa;color:#006666}
 .t-corp h3{background:var(--plum)}.t-corp .sub{background:#f8f0fa;color:#6B3580}
 .docs-sub{background:#f8f9fa;padding:.85rem 1.5rem;border-top:2px solid var(--line);font-weight:700;font-size:.9rem}
+
 .docs-sub span{font-weight:400;color:var(--soft);font-size:.8rem;margin-left:.5rem}
+
 .doc-row{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(0,0,0,.05)}
 .doc-row:nth-child(even){background:rgba(0,0,0,.015)}
+.doc-row[hidden]{display:none}
+.doc-head[hidden]{display:none}
+
 .doc-head{background:#fff;font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+
 .doc-head div{padding:.6rem 1.5rem}
 .doc-head .h-dacs{background:#e6f7f7;color:var(--teal)}.doc-head .h-corp{background:#f3eaf7;color:var(--plum)}
 .doc{display:block;padding:.8rem 1.5rem;color:var(--text);text-decoration:none;font-size:.87rem;font-weight:500;transition:background .2s}
@@ -78,26 +108,36 @@ h3{font-size:1.4rem;margin:2rem 0 1rem}
 .doc.na::after{content:""}
 .doc::before{display:none;font-size:.7rem;font-weight:700;letter-spacing:.06em;margin-right:.5rem}
 .doc.dacs::before{content:"DACS";color:var(--teal)}.doc.corp::before{content:"CORP";color:var(--plum)}
+
 .docs-foot{background:#f8f9fa;padding:.7rem 1.5rem;border-top:1px solid rgba(0,0,0,.06);font-size:.8rem;color:var(--soft)}
 
+
 /* AI */
+
 .ai{background:linear-gradient(135deg,rgba(0,102,204,.05),rgba(0,151,167,.05));border-radius:12px;padding:2rem;margin-bottom:2rem}
 .ai h2{font-size:1.8rem;margin-bottom:1rem}
 .bubbles{display:flex;gap:1rem;flex-wrap:wrap;margin:1.5rem 0}
 .bubble{background:#fff;border:1px solid rgba(0,102,204,.2);border-radius:20px;padding:.6rem 1.2rem;font-size:.85rem;color:var(--muted)}
 .benefits{display:flex;gap:2rem;flex-wrap:wrap;margin-bottom:1.5rem;font-size:.9rem;color:var(--muted)}
+
 .gems{background:linear-gradient(135deg,rgba(66,39,90,.07),rgba(99,60,180,.04));border:1.5px solid rgba(99,60,180,.25);border-radius:16px;padding:2rem}
 .gems h2{font-size:1.4rem;color:var(--plum);margin-bottom:.75rem}
 .gems>p{color:var(--muted);margin-bottom:.6rem}
+
 .gems a.lnk{color:#6633CC;font-weight:700}
+
 .net{display:inline-block;background:rgba(255,193,7,.1);border:1px solid rgba(255,193,7,.4);border-radius:8px;padding:.45rem .9rem;margin-bottom:1.5rem;font-size:.82rem;color:#856404;font-weight:600}
 .gem{display:flex;flex-direction:column;gap:.6rem;border-color:rgba(99,60,180,.18)}
 .gem small{display:block;font-size:.7rem;font-weight:700;color:#6633CC;letter-spacing:.08em;text-transform:uppercase}
 .gem strong{font:700 1rem 'Figtree',sans-serif}
 .gem ul{list-style:none;flex:1}
+
 .gem li{font-size:.82rem;color:var(--soft);padding:.2rem 0}
+
 .gem li::before{content:"✦ "}
+
 .gem .btn{background:linear-gradient(135deg,#6633CC,var(--plum));text-align:center;font-size:.85rem;padding:.6rem 1rem}
+
 
 /* Announcements etc. */
 .news{background:linear-gradient(135deg,rgba(0,102,204,.07),rgba(66,39,90,.04));border:1.5px solid rgba(0,102,204,.3);border-radius:16px;padding:2rem}
@@ -105,49 +145,122 @@ h3{font-size:1.4rem;margin:2rem 0 1rem}
 .tag{display:inline-block;background:var(--blue);color:#fff;border-radius:20px;padding:.25rem .9rem;font-size:.75rem;font-weight:700;letter-spacing:.05em;margin-left:.5rem}
 .meta{display:flex;gap:1.5rem;flex-wrap:wrap;margin:.8rem 0 1.2rem;font-size:.82rem;color:var(--soft)}
 .news p{color:var(--muted);font-size:.93rem;line-height:1.8;margin-bottom:1rem}
+
 .news .card h4{display:block;font-size:.9rem}
+
 .news .card p{font-size:.83rem;line-height:1.5;margin:.2rem 0 0}
 .kb{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;padding-bottom:1rem;border-bottom:1px solid var(--line);margin-bottom:1rem;color:var(--muted);font-size:.9rem}
+
 .kb strong{color:var(--blue);font-size:1.05rem}
+
 .article{display:flex;justify-content:space-between;gap:1rem;padding:.85rem 1.2rem;background:rgba(0,102,204,.04);border:1px solid rgba(0,102,204,.15);border-radius:10px;text-decoration:none;color:inherit}
 .article:hover{background:rgba(0,102,204,.09)}
+
 .article strong{font-size:.92rem;color:var(--blue)}
+
 .article small{display:block;color:var(--soft);font-size:.82rem}
 .article span{font-size:.82rem;font-weight:600;color:var(--blue);white-space:nowrap}
 .videos{display:grid;gap:.6rem}
+
 .video{display:flex;align-items:center;gap:1.2rem;padding:.9rem 1.2rem;background:rgba(255,255,255,.92);box-shadow:var(--shadow);border:1px solid var(--line);border-radius:12px;text-decoration:none;color:inherit;transition:all .3s}
 .video:hover{transform:translateY(-3px);border-color:var(--blue)}
+
 .video b{display:block;font-size:.88rem;font-weight:600}
+
 .video small{color:#007985;font-size:.78rem;font-weight:500}
 .road{background:linear-gradient(135deg,rgba(0,102,204,.07),rgba(252,180,0,.07));border:1.5px solid rgba(0,102,204,.2);border-radius:14px;padding:2rem;margin-bottom:1.5rem}
 .road h3{margin:0 0 1rem;font-size:1.25rem;color:var(--blue)}
+
 .road p{color:var(--muted);margin-bottom:.75rem}
 .tips{list-style:none}.tips li{padding:.5rem 0;color:var(--muted)}.tips li::before{content:"💡 "}
 .res{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}
 .res a{text-align:center;text-decoration:none;color:inherit;padding:2rem}
 .res .ic{font-size:2.6rem}
+
 .res b{display:block;color:var(--blue);font-size:1.1rem;margin:.5rem 0 .3rem}
+
 .res span{color:var(--muted);font-size:.9rem}
+
 .steps{list-style:none}.steps li{padding:.7rem 0;color:var(--muted)}.steps a{font-weight:600;text-decoration:none}.steps a:hover{text-decoration:underline}
 footer{margin-left:240px;background:rgba(255,255,255,.95);padding:2rem 3rem;text-align:center;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
 
+
+
+
+/* Tutorial videos */
+.vintro{color:var(--muted);font-size:.92rem;margin-bottom:1rem}
+.vchips{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.25rem}
+.chip{padding:.45rem 1rem;border-radius:20px;border:1px solid rgba(0,102,204,.3);background:#fff;color:var(--blue);font:600 .82rem 'Poppins',sans-serif;cursor:pointer;transition:all .2s}
+.chip:hover{background:rgba(0,102,204,.08)}
+.chip.active{background:var(--blue);border-color:var(--blue);color:#fff}
+.chip:focus-visible,.vcard:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1rem}
+.vcard{display:flex;gap:1rem;align-items:flex-start;padding:1.1rem 1.25rem;background:rgba(255,255,255,.92);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:12px;box-shadow:var(--shadow);text-decoration:none;color:inherit;transition:border-color .2s,box-shadow .2s}
+.vcard:hover{box-shadow:0 8px 28px rgba(0,0,0,.12)}
+.vcard[hidden]{display:none}
+.vnum{flex:none;width:34px;height:34px;border-radius:50%;background:rgba(0,102,204,.1);color:var(--blue);display:flex;align-items:center;justify-content:center;font:800 .95rem 'Figtree',sans-serif}
+.vtag{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);margin-bottom:.2rem}
+.vcard b{display:block;font:700 1rem 'Figtree',sans-serif;color:var(--blue);margin-bottom:.2rem}
+.vcard p{font-size:.85rem;color:var(--muted);line-height:1.5;margin-bottom:.5rem}
+.vcard small{font-size:.8rem;font-weight:600;color:#007985}
+
+/* Work Package reuse stepper */
+.stepper{margin:1.5rem 0}
+.st-track{list-style:none;display:flex}
+.st-track li{flex:1;position:relative}
+.st-track li:not(:last-child)::after{content:"";position:absolute;top:22px;left:50%;width:100%;height:3px;background:rgba(0,102,204,.18);transition:background .4s}
+.st-track li.done:not(:last-child)::after{background:var(--blue)}
+.st-dot{position:relative;z-index:1;width:100%;display:flex;flex-direction:column;align-items:center;gap:.5rem;background:none;border:0;cursor:pointer;font:inherit;color:var(--muted);padding:0 .25rem}
+.st-num{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#fff;border:2px solid rgba(0,102,204,.3);color:var(--blue);font:800 1rem 'Figtree',sans-serif;transition:all .3s}
+.st-label{font-size:.8rem;font-weight:600}
+.st-dot:hover .st-num{border-color:var(--blue)}
+.st-dot:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:8px}
+.st-track li.done .st-num{background:#e6f1fb;border-color:var(--blue)}
+.st-dot.active .st-num{background:var(--blue);border-color:var(--blue);color:#fff;transform:scale(1.12);box-shadow:0 0 0 6px rgba(0,102,204,.15)}
+.st-dot.active .st-label{color:var(--blue)}
+.st-panel{display:flex;align-items:center;gap:1.25rem;min-height:110px;margin-top:1.25rem;padding:1.25rem 1.5rem;background:rgba(255,255,255,.92);box-shadow:var(--shadow);border:1px solid var(--line);border-radius:12px;animation:stIn .35s ease}
+.st-icon{font-size:2.4rem;line-height:1}
+.news .st-body h4{display:block;font-size:1.1rem;margin-bottom:.3rem}
+.news .st-body p{margin:0}
+.st-ctrl{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin:1rem 0 1.5rem}
+.st-count{font-size:.82rem;color:var(--soft)}
+.st-btn{padding:.55rem 1.2rem;border-radius:8px;border:1px solid rgba(0,102,204,.35);background:#fff;color:var(--blue);font:600 .88rem 'Poppins',sans-serif;cursor:pointer;transition:all .2s}
+.st-btn:hover{background:rgba(0,102,204,.08)}
+.st-btn.primary{background:var(--blue);color:#fff;border-color:var(--blue)}
+.st-btn.primary:hover{background:var(--blue-d)}
+.st-btn:disabled{opacity:.4;cursor:default}
+.st-btn:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+@keyframes stIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (max-width:768px){.st-label{font-size:.7rem}.st-num{width:38px;height:38px}.st-track li:not(:last-child)::after{top:19px}.st-panel{flex-direction:column;align-items:flex-start;gap:.6rem}}
+@media (prefers-reduced-motion:reduce){.st-panel{animation:none}.st-dot.active .st-num{transform:none}}
+
 @media (max-width:768px){
+
   .sidebar{position:sticky;top:0;width:100%;padding:0;display:flex;align-items:center;overflow-x:auto;overflow-y:hidden;inset:auto}
+
   .sidebar-logo{display:none}
+
   .nav-links{display:flex}
+
   .nav-links a{white-space:nowrap;padding:.9rem 1rem;border-left:0;border-bottom:3px solid transparent}
+
   .nav-links a:hover,.nav-links a.active{border-bottom-color:var(--blue)}
+
   .main-content,footer{margin-left:0}
   .hero{padding:3rem 1.5rem}.hero h1{font-size:2rem}.subtitle{font-size:1.1rem}
   section.block{padding:2rem 1.25rem}
+
   .dc,.doc-row{grid-template-columns:1fr}
+
   .doc-head{display:none}
+
   .doc::before{display:inline}
   .doc-row{padding:.2rem 0}
   .ai,.gems,.news{padding:1.25rem}
   .benefits{gap:.75rem;flex-direction:column}
   footer{padding:1.5rem 1.25rem}
 }
+
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.card:hover,.btn:hover,.video:hover{transform:none}}
 </style>
 </head>
@@ -157,9 +270,11 @@ footer{margin-left:240px;background:rgba(255,255,255,.95);padding:2rem 3rem;text
   <ul class="nav-links">
     <li><a href="#what-is">What is WBO?</a></li>
     <li><a href="#workspace">Workspace</a></li>
-    <li><a href="#dacs-corp">DACS &amp; CORP</a></li>
+    <li><a href="#dacs-corp">DACS & CORP</a></li>
     <li><a href="#ai-sidekick">AI Sidekick</a></li>
+
     <li><a href="#gems">Strategy Gems</a></li>
+
     <li><a href="#announcements">Announcements</a></li>
     <li><a href="#knowledge">Knowledge Base</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -169,6 +284,7 @@ footer{margin-left:240px;background:rgba(255,255,255,.95);padding:2rem 3rem;text
 </nav>
 <main class="main-content">
 
+
 <header class="hero">
   <div class="hero-content">
     <h1><span aria-hidden="true">🌍</span> Welcome to the WBO Tech Suite</h1>
@@ -176,6 +292,8 @@ footer{margin-left:240px;background:rgba(255,255,255,.95);padding:2rem 3rem;text
     <p>Whether you're brand new to monday.com or a returning user, you're in the right place. This page is your single reference point for everything you need to navigate, contribute, and get the most out of the WBO Tech Suite.</p>
   </div>
 </header>
+
+
 
 <section class="block" id="what-is">
   <h2>What is the WBO Tech Suite?</h2>
@@ -185,12 +303,13 @@ footer{margin-left:240px;background:rgba(255,255,255,.95);padding:2rem 3rem;text
   </div>
   <div class="quote"><span aria-hidden="true">💡</span> The Tech Suite is not just another tool — it's your engine for growth and global collaboration.</div>
   <div class="mena">
-    <h3><span aria-hidden="true">🌍</span> Middle East &amp; North Africa Affiliates</h3>
+    <h3><span aria-hidden="true">🌍</span> Middle East & North Africa Affiliates</h3>
     <small>Powered by Airtable WBO Tech Suite</small>
     <p>Affiliates in the <strong>Middle East and North Africa (MENA)</strong> region operate on a dedicated instance of the WBO Tech Suite built on <strong>Airtable</strong>. This separate but fully aligned platform mirrors the same Working by Outcomes framework used across all Roche Pharma International affiliates.</p>
     <a class="btn amber" href="https://airtable.com/appVHFoKySMkhVz5y/pagH19GmQNYaOfQT0" target="_blank" rel="noopener noreferrer">Open Airtable WBO Tech Suite →</a>
   </div>
 </section>
+
 
 <section class="block" id="workspace">
   <h2>How the Workspace is Organized</h2>
@@ -215,7 +334,7 @@ footer{margin-left:240px;background:rgba(255,255,255,.95);padding:2rem 3rem;text
       </ul>
     </div>
     <div class="card">
-      <h4><span aria-hidden="true">🗄️</span> Repository &amp; Workflows</h4>
+      <h4><span aria-hidden="true">🗄️</span> Repository & Workflows</h4>
       <p style="margin-bottom:.8rem;color:var(--muted);font-size:.9rem">Reference boards that power automations and data consistency:</p>
       <ul class="arrows">
         <li>Countries + Codes</li><li>Disease Area</li><li>Product</li><li>Function</li><li>Area</li>
@@ -224,6 +343,7 @@ footer{margin-left:240px;background:rgba(255,255,255,.95);padding:2rem 3rem;text
     </div>
   </div>
 </section>
+
 
 <section class="block" id="dacs-corp" style="padding-top:0">
   <div class="docs">
@@ -251,29 +371,47 @@ footer{margin-left:240px;background:rgba(255,255,255,.95);padding:2rem 3rem;text
         </ul>
       </div>
     </div>
-    <div class="docs-sub"><span aria-hidden="true">📂</span> Documents by Disease Area <span>— select a link to open the deck in Google Slides</span></div>
+    <div class="docs-sub"><span aria-hidden="true">📂</span> Documents by Disease Area <span>— opens in Google Slides</span></div>
+    <div class="doc-search">
+      <label class="sr" for="doc-q">Search disease areas</label>
+      <input id="doc-q" type="search" placeholder="Search for a disease area, e.g. Lung" autocomplete="off">
+      <span id="doc-n" aria-live="polite"></span>
+    </div>
+    <p class="doc-none" id="doc-hint">Search for a disease area to find its DACS and CORP documentation. Both documents are shown together in the results.</p>
+    <p class="doc-none" id="doc-none" hidden>No disease area matches your search.</p>
     <div class="doc-row doc-head" aria-hidden="true"><div class="h-dacs">DACS</div><div class="h-corp">CORP</div></div>
 
+
+
+
     <div class="doc-row"><a class="doc dacs" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1qbGKG3fKSbJS9kWr6eKLHNQDa47AFOcXXFOf86otHrI/edit?slide=id.g3b5cd6f7cad_0_806">Alzheimer's Disease</a><a class="doc corp" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1AEnlGk1AD5g9348_Qrkz_4Bs5rI5CpaCfDs3uAB2lV0/edit?slide=id.g3cdeaea8e43_0_981">Alzheimer's Disease</a></div>
+
     <div class="doc-row"><a class="doc dacs" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/18zKyiYd7CJCpPiQOLYyA7ZD_NJR_9bQfK2Me6A3AzrY/edit?slide=id.g3965c47f89d_1_330">Breast Cancer</a><a class="doc corp" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1ofHDJOlXS2lqtU5j8NeTycJK734aTvhko4bTtYacHQI/edit?slide=id.g370fd66b260_0_27">Breast Cancer</a></div>
     <!-- TODO: GI/GU CORP currently points to the same deck as DACS. Replace with the correct CORP deck URL. -->
     <div class="doc-row"><a class="doc dacs" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/11hpYu0ULMdHiHR8Z080o7kijUQx1_mygX2eSoA0Nv9A/edit?slide=id.g368ee79c0bf_0_804">GI/GU</a><a class="doc corp" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/11hpYu0ULMdHiHR8Z080o7kijUQx1_mygX2eSoA0Nv9A/edit?slide=id.g368ee79c0bf_0_804">GI/GU</a></div>
+
     <div class="doc-row"><a class="doc dacs" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1hskoXEztWIXCipse9Z4YMR75NdqPfVN2QKnAGcHfLaQ/edit?slide=id.g3828184a5ba_0_2396">Inflammatory Bowel Disease (IBD)</a><a class="doc corp" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1mspp-XhK3O-mVe2UriX92xWMAJzT2G-TMF9CHYsmSZI/edit?slide=id.g3a92c9c795f_2_9">Inflammatory Bowel Disease (IBD)</a></div>
+
     <!-- TODO: Lung DACS and CORP use the same slide ID in two decks; verify it. -->
     <div class="doc-row"><a class="doc dacs" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1kpbYHeTDyA8UxUzroQAkmesu5e8Qw7wJz4qkk9qUc7c/edit?slide=id.g33fd287d680_0_2696">Lung</a><a class="doc corp" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1zq-__y6E3YNEOtB6VMhy6zhd_sQdOTRKkPGzkNIqeDY/edit?slide=id.g33fd287d680_0_2696">Lung</a></div>
     <div class="doc-row"><a class="doc dacs" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1Odok2DJHDc2ylPAn72HklK2e2sIczWF0ILyhNtVFZ6M/edit?slide=id.g34bab63190b_1_6341">Malignant Haematology</a><a class="doc corp" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1byFxKzzHsZGYI5wMJcAB5wUilHB7iZ3PcOhYknZSIQk/edit?slide=id.g3724f5f0cd9_0_2662">Malignant Haematology</a></div>
+
     <!-- Slide anchors removed from MS and Non-Malignant Haematology (auto-generated SLIDES_API IDs are unreliable) -->
+
     <div class="doc-row"><a class="doc dacs" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1i0ThkXFi_o-I_hMmnduvq4wBiEgUUtZl1cAj2y8Zf9I/edit">Multiple Sclerosis</a><a class="doc corp" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1ALhoeWHx0JHFNp174AoJut1rqTx-i7qJMhXSUcm4KMU/edit">Multiple Sclerosis</a></div>
-    <div class="doc-row"><a class="doc dacs" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1yAqqCFgV1N_fzOWae6IhLjORSv-tgAWgHVwGqhx0xBw/edit?slide=id.g36b29943221_0_366">Nephrology &amp; Rheumatology</a><a class="doc corp" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1K3ab8R7tdAU8bRqSDq53UgSMo9Zuugw3-Bf-oiFC0E8/edit?slide=id.g3b651d9b26f_0_2695">Nephrology &amp; Rheumatology</a></div>
+
+    <div class="doc-row"><a class="doc dacs" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1yAqqCFgV1N_fzOWae6IhLjORSv-tgAWgHVwGqhx0xBw/edit?slide=id.g36b29943221_0_366">Nephrology & Rheumatology</a><a class="doc corp" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1K3ab8R7tdAU8bRqSDq53UgSMo9Zuugw3-Bf-oiFC0E8/edit?slide=id.g3b651d9b26f_0_2695">Nephrology & Rheumatology</a></div>
     <div class="doc-row"><a class="doc dacs" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1ZudlM7iiqXjxRshd00EiBACai_f2LQaPtk96zGZ6RFk/edit?slide=id.g3670acd995d_0_81">Neuromuscular Disease (NMD)</a><a class="doc corp" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1ho9YFLBQd8RMEDG2N0t-3bsQ8kDyMI9GVYp2LBVDTjI/edit?slide=id.g38b03b7b8c1_0_1980">Neuromuscular Disease (NMD)</a></div>
     <div class="doc-row"><a class="doc dacs" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/10JQ2vB6iGMo_jKF0pH4jIat6kv-LHuHb287ag3PKqEY/edit?slide=id.g3e5f6120b39_0_1291">Non-Malignant Haematology</a><a class="doc corp" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1tMYtM-ffCegBb7468YmK2S4iDAVjufYzGTcFj27kzoc/edit">Non-Malignant Haematology</a></div>
-    <div class="doc-row"><a class="doc dacs" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1tzV78QgIU2_ZxZ4jf_zxjni6QP1NEOQvvMMEXsvcR_w/edit?slide=id.g3aede41759e_1_2773">Obesity &amp; Metabolism</a><span class="doc corp na" aria-disabled="true">Coming soon</span></div>
+    <div class="doc-row"><a class="doc dacs" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1tzV78QgIU2_ZxZ4jf_zxjni6QP1NEOQvvMMEXsvcR_w/edit?slide=id.g3aede41759e_1_2773">Obesity & Metabolism</a><span class="doc corp na" aria-disabled="true">Coming soon</span></div>
     <div class="doc-row"><a class="doc dacs" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1tjieq0zBqWinDE3LGl4t8NaQu4LqFLUmiyB8XZjUXNk/edit?slide=id.g36aa9b15fd4_17_321">Ophthalmology — Retinal Vascular Diseases</a><a class="doc corp" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1E38CpPmNdbs_uLJDEfzlxgI3bqgZ2mj4Gs2J49mvK2Q/edit?slide=id.g362ee217855_2_392">Ophthalmology — Retinal Vascular Diseases</a></div>
     <div class="doc-row"><a class="doc dacs" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1f8wLeCOGg0_yvDfavTRRk3z3yi2d-9d_FrLXws5W8W0/edit?slide=id.g39ab7406759_0_854">Parkinson's Disease</a><span class="doc corp na" aria-disabled="true">Coming soon</span></div>
+
 
     <div class="docs-foot">Entries marked "Coming soon" are not yet available.</div>
   </div>
 </section>
+
 
 <section class="block" id="ai-sidekick">
   <div class="ai">
@@ -284,6 +422,7 @@ footer{margin-left:240px;background:rgba(255,255,255,.95);padding:2rem 3rem;text
     <a class="btn" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/198XfMCDY6wZZEh1LKHWeQuuhjS0lVEinRJXgh4_FeVs/edit?slide=id.p1#slide=id.p1"><span aria-hidden="true">📋</span> View Full Prompt Library →</a>
   </div>
 
+
   <div class="gems" id="gems">
     <h2><span aria-hidden="true">💎</span> Meet the WBO Strategy Gems</h2>
     <p>From insight to Tech Suite-ready outcomes: <a class="lnk" target="_blank" rel="noopener noreferrer" href="https://bi.roche.ru/WBOGems/#gems">Explore the WBO Strategy Gems</a> to build, draft, or quality-check your strategy.</p>
@@ -291,12 +430,12 @@ footer{margin-left:240px;background:rgba(255,255,255,.95);padding:2rem 3rem;text
     <div class="grid" style="margin:0">
       <div class="card gem">
         <div><small>Full Journey</small><strong><span aria-hidden="true">📈</span> Strategy Architect</strong></div>
-        <ul><li>Ecosystem &amp; SWOT</li><li>MTOs &amp; HWWKs</li><li>Reuses global uMTOs</li><li>Optional Work Packages</li></ul>
+        <ul><li>Ecosystem & SWOT</li><li>MTOs & HWWKs</li><li>Reuses global uMTOs</li><li>Optional Work Packages</li></ul>
         <a class="btn" target="_blank" rel="noopener noreferrer" href="https://gemini.google.com/gem/12fdd6a312d2?usp=sharing">Open Strategy Architect →</a>
       </div>
       <div class="card gem">
         <div><small>Create</small><strong><span aria-hidden="true">☀️</span> Outcome Generator</strong></div>
-        <ul><li>Beneficiary + Value + Target</li><li>Leading &amp; lagging HWWKs</li><li>Triple Win</li><li>Tech Suite card</li></ul>
+        <ul><li>Beneficiary + Value + Target</li><li>Leading & lagging HWWKs</li><li>Triple Win</li><li>Tech Suite card</li></ul>
         <a class="btn" target="_blank" rel="noopener noreferrer" href="https://gemini.google.com/gem/f89407989015?usp=sharing">Open Outcome Generator →</a>
       </div>
       <div class="card gem">
@@ -308,44 +447,73 @@ footer{margin-left:240px;background:rgba(255,255,255,.95);padding:2rem 3rem;text
   </div>
 </section>
 
+
 <section class="block" id="announcements">
   <h2>Announcements</h2>
+
   <h3 style="margin-top:0"><span aria-hidden="true">🎉</span> Recent Updates</h3>
+
   <article class="news">
-    <div><span aria-hidden="true" style="font-size:1.4rem">🌐</span> <h4>New Guide: Sharing AI Sidekick Reports via Google Sites</h4><span class="tag">GUIDE &amp; BEST PRACTICES</span></div>
-    <div class="meta"><span>🎯 <strong>Audience:</strong> All Tech Suite Users &amp; Report Creators</span><span>📊 <strong>Topic:</strong> Reporting &amp; Stakeholder Sharing</span></div>
-    <p>Learn how to leverage Google Sites to publish, curate, and share dynamic reports and visual insights generated by the <strong>AI Sidekick</strong>. This guide walks you through setting up a professional, centralized site to deliver real-time WBO progress and analytics to stakeholders across Roche.</p>
-    <div class="grid">
-      <div class="card static"><h4>🤖 Capture Sidekick Outputs</h4><p>Extract generated summaries, tables, and visual reporting directly from chat</p></div>
-      <div class="card static"><h4>🖥️ Build Your Google Site</h4><p>Follow step-by-step instructions to create a clean, Roche-branded report hub</p></div>
-      <div class="card static"><h4>👥 Seamless Collaboration</h4><p>Share insights across teams and leadership without complex board permissions</p></div>
+    <div><span aria-hidden="true" style="font-size:1.4rem">♻️</span> <h4>Work Package Reuse is Ready</h4><span class="tag">NEW FEATURE</span></div>
+    <div class="meta"><span>🎯 <strong>Audience:</strong> Work Package Owners & Affiliate Teams</span><span>📊 <strong>Topic:</strong> Reusing Work Packages across affiliates</span></div>
+    <p>You can now copy a Work Package to another affiliate's board without rebuilding it from scratch. The configuration is already deployed, so there is nothing for you to set up. Just follow these four steps:</p>
+
+    <div class="stepper" id="reuse-stepper">
+      <ol class="st-track" role="tablist" aria-label="Work Package reuse steps">
+        <li><button type="button" class="st-dot" role="tab" id="st-tab-0" aria-controls="st-panel" data-icon="💬" data-title="Comment “reuse”" data-text="Open the work package and add a comment with the word “reuse”."><span class="st-num">1</span><span class="st-label">Comment</span></button></li>
+        <li><button type="button" class="st-dot" role="tab" id="st-tab-1" aria-controls="st-panel" data-icon="🖱️" data-title="Click Reuse" data-text="Click the Reuse button in the Reuse column of the work package."><span class="st-num">2</span><span class="st-label">Reuse</span></button></li>
+        <li><button type="button" class="st-dot" role="tab" id="st-tab-2" aria-controls="st-panel" data-icon="🏢" data-title="Select the destination" data-text="Choose the affiliate board where the work package should be copied."><span class="st-num">3</span><span class="st-label">Destination</span></button></li>
+        <li><button type="button" class="st-dot" role="tab" id="st-tab-3" aria-controls="st-panel" data-icon="⏳" data-title="Wait a few seconds" data-text="Give it a few seconds to finish. The new work package will be yours, automatically assigned to you."><span class="st-num">4</span><span class="st-label">Wait</span></button></li>
+      </ol>
+      <div class="st-panel" id="st-panel" role="tabpanel" aria-live="polite" aria-labelledby="st-tab-0">
+        <div class="st-icon" aria-hidden="true">💬</div>
+        <div class="st-body"><h4>Comment “reuse”</h4><p>Open the work package and add a comment with the word “reuse”.</p></div>
+      </div>
+      <div class="st-ctrl">
+        <button type="button" class="st-btn" id="st-prev">← Back</button>
+        <span class="st-count" id="st-count">Step 1 of 4</span>
+        <button type="button" class="st-btn primary" id="st-next">Next →</button>
+      </div>
     </div>
-    <a class="btn" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/19h0fdS5v5LVEAngpgN18wuO3ByYbT6y5jqQzgBpwApU/edit?slide=id.p#slide=id.p"><span aria-hidden="true">📊</span> Open Google Sites Setup Guide (Google Slides) →</a>
+    <a class="btn" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1KYDRPf6L47uajrFbbfSrq4BgUOsU1loRFZW8nb4ft0k/edit?slide=id.p#slide=id.p"><span aria-hidden="true">📊</span> Open the Reuse Presentation (Google Slides) →</a>
   </article>
+
 </section>
 
+
 <section class="block" id="knowledge">
-  <h2>Knowledge Base &amp; Resources</h2>
+
+  <h2>Knowledge Base & Resources</h2>
+
   <div class="card static">
     <div class="kb">
-      <div><strong>📚 WBO Knowledge Base</strong> — Curated articles, guides &amp; resources for the Tech Suite</div>
+      <div><strong>📚 WBO Knowledge Base</strong> — Curated articles, guides & resources for the Tech Suite</div>
       <a class="btn" style="padding:.5rem 1.1rem;font-size:.85rem" target="_blank" rel="noopener noreferrer" href="https://globalroche.monday.com/boards/5094113319">Open Knowledge Base Board →</a>
     </div>
     <a class="article" target="_blank" rel="noopener noreferrer" href="https://globalroche.monday.com/boards/5094113319/pulses/3293984582?doc_id=5106312733">
-      <div><strong>KB00007 — How to contact Roche Monday support &amp; reactivate Viewer accounts</strong><small>Step-by-step guidance on contacting support and restoring viewer account access</small></div>
+
+      <div><strong>KB00007 — How to contact Roche Monday support & reactivate Viewer accounts</strong><small>Step-by-step guidance on contacting support and restoring viewer account access</small></div>
       <span>Read Article →</span>
     </a>
     <p style="margin-top:.8rem;font-size:.82rem;color:var(--soft)">More articles are added regularly on the Knowledge Base board.</p>
   </div>
   <h3>🎥 Tutorial Videos (Cornerstone)</h3>
-  <div class="videos">
-    <a class="video" target="_blank" rel="noopener noreferrer" href="https://roche.csod.com/ui/lms-learning-details/app/course/e1bdfd82-659c-4a1d-aa92-c81691cf3ffc"><span aria-hidden="true">▶️</span><div><b>Introduction to the Tech Suite: What It Is and How to Navigate It (Including monday.com)</b><small>Watch on Cornerstone →</small></div></a>
-    <a class="video" target="_blank" rel="noopener noreferrer" href="https://roche.csod.com/ui/lms-learning-details/app/course/cdf39fbd-bfe4-4ff8-b517-00c7705bf2b8"><span aria-hidden="true">▶️</span><div><b>Viewing and Updating Outcomes: How to Access, Subscribe, and Add Progress Signals</b><small>Watch on Cornerstone →</small></div></a>
-    <a class="video" target="_blank" rel="noopener noreferrer" href="https://roche.csod.com/ui/lms-learning-details/app/course/a20fd30b-4a3d-4fec-afa9-c9be5003dd0f"><span aria-hidden="true">▶️</span><div><b>Creating and Managing Outcomes as an Outcome Owner (Linking LTO/MTO/STO) and Defining HWWK</b><small>Watch on Cornerstone →</small></div></a>
-    <a class="video" target="_blank" rel="noopener noreferrer" href="https://roche.csod.com/ui/lms-learning-details/app/course/4f0bb77f-0ec2-4c31-91cb-23c6b28c330a"><span aria-hidden="true">▶️</span><div><b>Managing Work Packages as a Work Package Owner: Initiating Work Packages, Linking Outcomes, and Adding Milestones</b><small>Watch on Cornerstone →</small></div></a>
-    <a class="video" target="_blank" rel="noopener noreferrer" href="https://roche.csod.com/ui/lms-learning-details/app/course/14825638-3880-4e68-8b70-f5aab3a9b760"><span aria-hidden="true">▶️</span><div><b>Collaborating as a Work Package Team Member: Updating Tasks, Adding Comments, and Marking Milestones Complete</b><small>Watch on Cornerstone →</small></div></a>
+  <p class="vintro">Tutorials are ordered from first steps to role-specific guidance. Select your role to see what applies to you.</p>
+  <div class="vchips" role="group" aria-label="Filter tutorials by role">
+    <button type="button" class="chip active" data-f="all" aria-pressed="true">All</button>
+    <button type="button" class="chip" data-f="outcome" aria-pressed="false">Outcome Owner</button>
+    <button type="button" class="chip" data-f="wpo" aria-pressed="false">Work Package Owner</button>
+    <button type="button" class="chip" data-f="member" aria-pressed="false">Team Member</button>
+  </div>
+  <div class="vgrid">
+    <a class="vcard" data-role="all" target="_blank" rel="noopener noreferrer" href="https://roche.csod.com/ui/lms-learning-details/app/course/e1bdfd82-659c-4a1d-aa92-c81691cf3ffc"><span class="vnum" aria-hidden="true">1</span><div><span class="vtag">Everyone</span><b>Introduction to the Tech Suite</b><p>What it is and how to navigate it, including monday.com</p><small>Watch on Cornerstone →</small></div></a>
+    <a class="vcard" data-role="all" target="_blank" rel="noopener noreferrer" href="https://roche.csod.com/ui/lms-learning-details/app/course/cdf39fbd-bfe4-4ff8-b517-00c7705bf2b8"><span class="vnum" aria-hidden="true">2</span><div><span class="vtag">Everyone</span><b>Viewing and updating outcomes</b><p>Access outcomes, subscribe and add progress signals</p><small>Watch on Cornerstone →</small></div></a>
+    <a class="vcard" data-role="outcome" target="_blank" rel="noopener noreferrer" href="https://roche.csod.com/ui/lms-learning-details/app/course/a20fd30b-4a3d-4fec-afa9-c9be5003dd0f"><span class="vnum" aria-hidden="true">3</span><div><span class="vtag">Outcome Owner</span><b>Creating and managing outcomes</b><p>Link LTO/MTO/STO and define HWWK as an Outcome Owner</p><small>Watch on Cornerstone →</small></div></a>
+    <a class="vcard" data-role="wpo" target="_blank" rel="noopener noreferrer" href="https://roche.csod.com/ui/lms-learning-details/app/course/4f0bb77f-0ec2-4c31-91cb-23c6b28c330a"><span class="vnum" aria-hidden="true">4</span><div><span class="vtag">Work Package Owner</span><b>Managing work packages</b><p>Initiate work packages, link outcomes and add milestones</p><small>Watch on Cornerstone →</small></div></a>
+    <a class="vcard" data-role="member" target="_blank" rel="noopener noreferrer" href="https://roche.csod.com/ui/lms-learning-details/app/course/14825638-3880-4e68-8b70-f5aab3a9b760"><span class="vnum" aria-hidden="true">5</span><div><span class="vtag">Team Member</span><b>Collaborating on a work package</b><p>Update tasks, add comments and mark milestones complete</p><small>Watch on Cornerstone →</small></div></a>
   </div>
 </section>
+
 
 <section class="block" id="roadmap">
   <h2>What's Coming Next</h2>
@@ -363,6 +531,7 @@ footer{margin-left:240px;background:rgba(255,255,255,.95);padding:2rem 3rem;text
   </div>
 </section>
 
+
 <section class="block" id="resources">
   <h2>External Resources</h2>
   <div class="res">
@@ -374,19 +543,24 @@ footer{margin-left:240px;background:rgba(255,255,255,.95);padding:2rem 3rem;text
   </div>
 </section>
 
+
 <section class="block" id="support">
-  <h2>Support &amp; Contacts</h2>
+  <h2>Support & Contacts</h2>
   <div class="card static">
     <ol class="steps">
       <li><strong>Step 1:</strong> Check this page first — most common questions are answered here</li>
       <li><strong>Step 2:</strong> Ask the AI Sidekick — type your question directly in the board chat</li>
       <li><strong>Step 3:</strong> Find your Super User — each country has a designated Tech Suite expert (<a target="_blank" rel="noopener noreferrer" href="https://globalroche.monday.com/boards/5093675056">view Super User list</a>)</li>
+
       <!-- TODO: add Step 4 "Still stuck? Contact the Global WBO team: [mailbox / ticket link]" -->
     </ol>
+
   </div>
 </section>
 </main>
+
 <footer>Last updated: October 2026 | WBO Tech Suite — Roche Pharma International</footer>
+
 
 <script>
 (function(){
@@ -404,6 +578,77 @@ footer{margin-left:240px;background:rgba(255,255,255,.95);padding:2rem 3rem;text
   },{rootMargin:'-20% 0px -70% 0px'});
   Object.keys(map).forEach(function(id){var el=document.getElementById(id); if(el)io.observe(el)});
 })();
+
+(function(){
+  var q=document.getElementById('doc-q'); if(!q)return;
+  var rows=document.querySelectorAll('.docs .doc-row:not(.doc-head)');
+  var head=document.querySelector('.docs .doc-head');
+  var n=document.getElementById('doc-n'), none=document.getElementById('doc-none'), hint=document.getElementById('doc-hint');
+  function run(){
+    var t=q.value.trim().toLowerCase(), shown=0;
+    rows.forEach(function(r){
+      var ok=t!==''&&r.textContent.toLowerCase().indexOf(t)>-1;
+      r.hidden=!ok; if(ok)shown++;
+    });
+    head.hidden=shown===0;
+    hint.hidden=t!=='';
+    none.hidden=t===''||shown>0;
+    n.textContent=t&&shown?shown+' result'+(shown>1?'s':''):'';
+  }
+  q.addEventListener('input',run);
+  run();
+})();
+
+(function(){
+  var chips=document.querySelectorAll('.chip'), cards=document.querySelectorAll('.vcard');
+  if(!chips.length)return;
+  chips.forEach(function(c){
+    c.addEventListener('click',function(){
+      var f=c.getAttribute('data-f');
+      chips.forEach(function(x){var on=x===c;x.classList.toggle('active',on);x.setAttribute('aria-pressed',on?'true':'false')});
+      cards.forEach(function(v){var r=v.getAttribute('data-role');v.hidden=!(f==='all'||r==='all'||r===f)});
+    });
+  });
+})();
+
+(function(){
+  var root=document.getElementById('reuse-stepper'); if(!root)return;
+  var dots=root.querySelectorAll('.st-dot'), panel=document.getElementById('st-panel');
+  var prev=document.getElementById('st-prev'), next=document.getElementById('st-next'), count=document.getElementById('st-count');
+  var cur=0, last=dots.length-1;
+  function show(i,focus){
+    cur=i;
+    dots.forEach(function(d,n){
+      var li=d.parentNode, done=n<i;
+      li.classList.toggle('done',done);
+      d.classList.toggle('active',n===i);
+      d.setAttribute('aria-selected',n===i?'true':'false');
+      d.setAttribute('tabindex',n===i?'0':'-1');
+      d.querySelector('.st-num').textContent=done?'✓':String(n+1);
+    });
+    var d=dots[i];
+    panel.setAttribute('aria-labelledby',d.id);
+    panel.innerHTML='<div class="st-icon" aria-hidden="true"></div><div class="st-body"><h4></h4><p></p></div>';
+    panel.querySelector('.st-icon').textContent=d.getAttribute('data-icon');
+    panel.querySelector('h4').textContent=d.getAttribute('data-title');
+    panel.querySelector('p').textContent=d.getAttribute('data-text');
+    count.textContent='Step '+(i+1)+' of '+(last+1);
+    prev.disabled=i===0;
+    next.textContent=i===last?'Start over ↺':'Next →';
+    if(focus)d.focus();
+  }
+  dots.forEach(function(d,n){
+    d.addEventListener('click',function(){show(n)});
+    d.addEventListener('keydown',function(e){
+      if(e.key==='ArrowRight'&&cur<last){e.preventDefault();show(cur+1,true)}
+      if(e.key==='ArrowLeft'&&cur>0){e.preventDefault();show(cur-1,true)}
+    });
+  });
+  prev.addEventListener('click',function(){if(cur>0)show(cur-1)});
+  next.addEventListener('click',function(){show(cur===last?0:cur+1)});
+  show(0);
+})();
+
 </script>
 </body>
 </html>
