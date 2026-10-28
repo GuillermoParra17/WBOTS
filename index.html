@@ -187,6 +187,36 @@ footer{margin-left:240px;background:rgba(255,255,255,.95);padding:2rem 3rem;text
 
 
 
+/* What's new banner and update log */
+.whatsnew{display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;padding:.75rem 3rem;background:linear-gradient(135deg,var(--blue),var(--blue-d));color:#fff;font-size:.9rem}
+.wn-badge{background:#fff;color:var(--blue);border-radius:20px;padding:.15rem .7rem;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.wn-text{flex:1;min-width:220px}
+.whatsnew a{color:#fff;font-weight:600;text-decoration:underline;white-space:nowrap}
+.whatsnew a:focus-visible{outline-color:#fff}
+.log-intro{color:var(--muted);font-size:.92rem;margin-bottom:.5rem}
+.log-month{margin:1.5rem 0 1rem;padding-bottom:.4rem;border-bottom:2px solid var(--line);font-size:1rem;letter-spacing:.06em;text-transform:uppercase;color:var(--soft)}
+.entry-old{background:rgba(255,255,255,.92);border:1px solid var(--line);border-radius:12px;margin-top:.75rem;box-shadow:var(--shadow)}
+.entry-old summary{display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;padding:.9rem 1.25rem;cursor:pointer;list-style:none}
+.entry-old summary::-webkit-details-marker{display:none}
+.entry-old summary::before{content:"▸";color:var(--blue);transition:transform .2s}
+.entry-old[open] summary::before{transform:rotate(90deg)}
+.entry-old summary time{font-size:.82rem;color:var(--soft);font-weight:600;white-space:nowrap}
+.entry-old summary strong{font:700 1rem 'Figtree',sans-serif;color:var(--blue)}
+.entry-old summary .tag{margin-left:0}
+.entry-old summary:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:12px}
+.log-group>summary{padding:1rem 1.25rem}
+.log-inner{padding:0 1.5rem 1.25rem}
+.log-inner .log-month:first-child{margin-top:.25rem}
+.entry{padding:1rem 0;border-bottom:1px solid var(--line)}
+.entry:last-child{border-bottom:0}
+.entry-head{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;margin-bottom:.4rem}
+.entry-head strong{font:700 1rem 'Figtree',sans-serif;color:var(--blue)}
+.entry-head .tag{margin-left:0}
+.entry p{color:var(--muted);font-size:.92rem;margin-bottom:.75rem}
+.entry .btn{padding:.5rem 1.1rem;font-size:.85rem}
+.entry-body{padding:0 1.25rem 1.25rem 2.4rem}
+.entry-body p{color:var(--muted);font-size:.92rem;margin-bottom:1rem}
+
 /* Tutorial videos */
 .vintro{color:var(--muted);font-size:.92rem;margin-bottom:1rem}
 .vchips{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.25rem}
@@ -249,6 +279,7 @@ footer{margin-left:240px;background:rgba(255,255,255,.95);padding:2rem 3rem;text
   .main-content,footer{margin-left:0}
   .hero{padding:3rem 1.5rem}.hero h1{font-size:2rem}.subtitle{font-size:1.1rem}
   section.block{padding:2rem 1.25rem}
+  .whatsnew{padding:.75rem 1.25rem}
 
   .dc,.doc-row{grid-template-columns:1fr}
 
@@ -269,13 +300,12 @@ footer{margin-left:240px;background:rgba(255,255,255,.95);padding:2rem 3rem;text
   <div class="sidebar-logo"><span aria-hidden="true">🌍</span> WBO Tech Suite</div>
   <ul class="nav-links">
     <li><a href="#what-is">What is WBO?</a></li>
-    <li><a href="#workspace">Workspace</a></li>
+    <li><a href="#announcements">Updates</a></li>
     <li><a href="#dacs-corp">DACS & CORP</a></li>
     <li><a href="#ai-sidekick">AI Sidekick</a></li>
 
     <li><a href="#gems">Strategy Gems</a></li>
 
-    <li><a href="#announcements">Announcements</a></li>
     <li><a href="#knowledge">Knowledge Base</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#resources">Resources</a></li>
@@ -284,6 +314,12 @@ footer{margin-left:240px;background:rgba(255,255,255,.95);padding:2rem 3rem;text
 </nav>
 <main class="main-content">
 
+
+<aside class="whatsnew" aria-label="Latest update">
+  <span class="wn-badge">New</span>
+  <span class="wn-text"><time datetime="2026-10">Oct 2026</time> · <strong>Work Package Reuse is ready</strong> — copy a work package to another affiliate in four steps.</span>
+  <a href="#announcements">See how →</a>
+</aside>
 
 <header class="hero">
   <div class="hero-content">
@@ -311,38 +347,106 @@ footer{margin-left:240px;background:rgba(255,255,255,.95);padding:2rem 3rem;text
 </section>
 
 
-<section class="block" id="workspace">
-  <h2>How the Workspace is Organized</h2>
-  <div class="grid">
-    <div class="card">
-      <h4><span aria-hidden="true">🏢</span> Regional Boards (50+ Affiliates)</h4>
-      <p style="margin-bottom:.8rem;color:var(--muted);font-size:.9rem">Each country has its own Work Package Overview board:</p>
-      <ul class="arrows">
-        <li><strong>EMEA:</strong> Germany, Greece, Poland, UK, Spain, Italy, France, Netherlands</li>
-        <li><strong>APAC:</strong> Australia, Singapore, South Korea, Taiwan, Hong Kong</li>
-        <li><strong>LATAM:</strong> Argentina, Colombia, CCAV</li>
-        <li><strong>Africa:</strong> Ghana, Nigeria, South Africa</li>
-        <li><strong>Global clusters:</strong> COMET, iNET</li>
-      </ul>
+
+<section class="block" id="announcements">
+  <h2>Announcements &amp; Update Log</h2>
+  <p class="log-intro">Newest first. Every update stays here as a record of what changed and when.</p>
+
+  <h3 class="log-month">October 2026</h3>
+
+  <article class="news">
+    <div><span aria-hidden="true" style="font-size:1.4rem">♻️</span> <h4>Work Package Reuse is Ready</h4><span class="tag">NEW FEATURE</span></div>
+    <div class="meta"><span>🗓️ <strong>Date:</strong> <time datetime="2026-10">Oct 2026</time></span><span>🎯 <strong>Audience:</strong> Work Package Owners & Affiliate Teams</span><span>📊 <strong>Topic:</strong> Reusing Work Packages across affiliates</span></div>
+    <p>You can now copy a Work Package to another affiliate's board without rebuilding it from scratch. The configuration is already deployed, so there is nothing for you to set up. Just follow these four steps:</p>
+
+    <div class="stepper" id="reuse-stepper">
+      <ol class="st-track" role="tablist" aria-label="Work Package reuse steps">
+        <li><button type="button" class="st-dot" role="tab" id="st-tab-0" aria-controls="st-panel" data-icon="💬" data-title="Comment “reuse”" data-text="Open the work package and add a comment with the word “reuse”."><span class="st-num">1</span><span class="st-label">Comment</span></button></li>
+        <li><button type="button" class="st-dot" role="tab" id="st-tab-1" aria-controls="st-panel" data-icon="🖱️" data-title="Click Reuse" data-text="Click the Reuse button in the Reuse column of the work package."><span class="st-num">2</span><span class="st-label">Reuse</span></button></li>
+        <li><button type="button" class="st-dot" role="tab" id="st-tab-2" aria-controls="st-panel" data-icon="🏢" data-title="Select the destination" data-text="Choose the affiliate board where the work package should be copied."><span class="st-num">3</span><span class="st-label">Destination</span></button></li>
+        <li><button type="button" class="st-dot" role="tab" id="st-tab-3" aria-controls="st-panel" data-icon="⏳" data-title="Wait a few seconds" data-text="Give it a few seconds to finish. The new work package will be yours, automatically assigned to you."><span class="st-num">4</span><span class="st-label">Wait</span></button></li>
+      </ol>
+      <div class="st-panel" id="st-panel" role="tabpanel" aria-live="polite" aria-labelledby="st-tab-0">
+        <div class="st-icon" aria-hidden="true">💬</div>
+        <div class="st-body"><h4>Comment “reuse”</h4><p>Open the work package and add a comment with the word “reuse”.</p></div>
+      </div>
+      <div class="st-ctrl">
+        <button type="button" class="st-btn" id="st-prev">← Back</button>
+        <span class="st-count" id="st-count">Step 1 of 4</span>
+        <button type="button" class="st-btn primary" id="st-next">Next →</button>
+      </div>
     </div>
-    <div class="card">
-      <h4><span aria-hidden="true">🏆</span> Outcomes</h4>
-      <ul class="arrows">
-        <li><strong>Short Term Outcomes (STO)</strong> — Immediate deliverables within a cycle</li>
-        <li><strong>Mid Term Outcomes (MTO)</strong> — Medium-horizon strategic objectives</li>
-        <li><strong>Long Term Outcomes (LTO)</strong> — Long-range strategic goals</li>
-      </ul>
+    <a class="btn" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1KYDRPf6L47uajrFbbfSrq4BgUOsU1loRFZW8nb4ft0k/edit?slide=id.p#slide=id.p"><span aria-hidden="true">📊</span> Open the Reuse Presentation (Google Slides) →</a>
+  </article>
+
+  <details class="entry-old log-group">
+    <summary><strong>Previous updates</strong><span class="tag">8</span></summary>
+    <div class="log-inner">
+    <div class="entry">
+      <div class="entry-head"><strong>Search Work Packages</strong><span class="tag">NEW FEATURE</span></div>
+      <p>Search work packages across affiliate boards from a single page. Results are refreshed daily.</p>
+      <a class="btn" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1KYDRPf6L47uajrFbbfSrq4BgUOsU1loRFZW8nb4ft0k/edit?slide=id.p#slide=id.p">Open the guide →</a>
     </div>
-    <div class="card">
-      <h4><span aria-hidden="true">🗄️</span> Repository & Workflows</h4>
-      <p style="margin-bottom:.8rem;color:var(--muted);font-size:.9rem">Reference boards that power automations and data consistency:</p>
-      <ul class="arrows">
-        <li>Countries + Codes</li><li>Disease Area</li><li>Product</li><li>Function</li><li>Area</li>
-        <li>Workflow boards for automated routing</li>
-      </ul>
+    <div class="entry">
+      <div class="entry-head"><strong>Lab</strong><span class="tag">NEW BOARD</span></div>
+      <p>Lab is a new board joining the WBO Tech Suite. We can now start collaborating with it.</p>
+      <a class="btn" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1t0JB3mqnYOxdsihnU89mMC6Gh1ByrkVEKRsnwS2hm-E/edit?slide=id.p1#slide=id.p1">Open the guide →</a>
     </div>
-  </div>
+    <div class="entry">
+      <div class="entry-head"><strong>Archiving</strong><span class="tag">UPDATE</span></div>
+      <p>See the linked guide for the full details.</p>
+      <a class="btn" target="_blank" rel="noopener noreferrer" href="https://globalroche.monday.com/boards/5092729104/pulses/3142243692?doc_id=5101701202">Read the article →</a>
+    </div>
+    <h3 class="log-month">September 2026</h3>
+    <!-- TODO: IPS has no link or description yet; add them here. Date is approximate (about 4 weeks before 27 Oct 2026). -->
+    <div class="entry">
+      <div class="entry-head"><strong>IPS</strong><span class="tag">NEW BOARD</span></div>
+      <p>IPS is a new board joining the WBO Tech Suite. We can now start collaborating with it.</p>
+    </div>
+    <h3 class="log-month">August 2026</h3>
+    <div class="entry">
+      <div class="entry-head"><strong>Validation for Completion</strong><span class="tag">UPDATE</span></div>
+      <p>See the linked guide for the full details.</p>
+      <a class="btn" target="_blank" rel="noopener noreferrer" href="https://globalroche.monday.com/boards/5092729104/pulses/3139926392?doc_id=5101636796">Read the article →</a>
+    </div>
+    <h3 class="log-month">June 2026</h3>
+    <div class="entry">
+      <div class="entry-head"><strong>Access Management Standardization</strong><span class="tag">UPDATE</span></div>
+      <p>See the linked guide for the full details.</p>
+      <a class="btn" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1RJgw_Zick6ctvNbhmqPytT0QpJ64Hf5NYqjDvpsL2iQ/edit?slide=id.p#slide=id.p">Open the guide →</a>
+    </div>
+    <h3 class="log-month">May 2026</h3>
+    <div class="entry">
+      <div class="entry-head"><strong>Multi-Layer Board</strong><span class="tag">UPDATE</span></div>
+      <p>See the linked guide for the full details.</p>
+      <a class="btn" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/11Nx9L6R3F1wF2tcpQCoBs3p-PgRbXKaWHd-0-2oTSdc/edit?slide=id.g24478ddaa5d_1_46#slide=id.g24478ddaa5d_1_46">Open the guide →</a>
+    </div>
+    <div class="entry">
+      <div class="entry-head"><strong>Board Standardization</strong><span class="tag">UPDATE</span></div>
+      <p>See the linked guide for the full details.</p>
+      <a class="btn" target="_blank" rel="noopener noreferrer" href="https://globalroche.monday.com/boards/5092729104/pulses/2854012670?doc_id=5094920273">Read the article →</a>
+    </div>
+    </div>
+  </details>
+
+  <!--
+    HOW TO ADD A NEW UPDATE
+    1. Move the current newest entry (the full <article class="news"> above) into the "Previous updates" group
+       as a collapsed-style block, under the right month heading, using this template:
+
+       <div class="entry">
+         <div class="entry-head"><strong>Title</strong><span class="tag">TAG</span></div>
+         <p>One or two sentences describing the update.</p>
+         <a class="btn" target="_blank" rel="noopener noreferrer" href="LINK">Open the guide →</a>
+       </div>
+
+    2. Add the new update as the full <article class="news"> on top, outside the group.
+    3. Update the text of the "What's new" banner at the top of the page.
+    4. Keep entries for at least 3-6 months.
+  -->
+
 </section>
+
 
 
 <section class="block" id="dacs-corp" style="padding-top:0">
@@ -445,39 +549,6 @@ footer{margin-left:240px;background:rgba(255,255,255,.95);padding:2rem 3rem;text
       </div>
     </div>
   </div>
-</section>
-
-
-<section class="block" id="announcements">
-  <h2>Announcements</h2>
-
-  <h3 style="margin-top:0"><span aria-hidden="true">🎉</span> Recent Updates</h3>
-
-  <article class="news">
-    <div><span aria-hidden="true" style="font-size:1.4rem">♻️</span> <h4>Work Package Reuse is Ready</h4><span class="tag">NEW FEATURE</span></div>
-    <div class="meta"><span>🎯 <strong>Audience:</strong> Work Package Owners & Affiliate Teams</span><span>📊 <strong>Topic:</strong> Reusing Work Packages across affiliates</span></div>
-    <p>You can now copy a Work Package to another affiliate's board without rebuilding it from scratch. The configuration is already deployed, so there is nothing for you to set up. Just follow these four steps:</p>
-
-    <div class="stepper" id="reuse-stepper">
-      <ol class="st-track" role="tablist" aria-label="Work Package reuse steps">
-        <li><button type="button" class="st-dot" role="tab" id="st-tab-0" aria-controls="st-panel" data-icon="💬" data-title="Comment “reuse”" data-text="Open the work package and add a comment with the word “reuse”."><span class="st-num">1</span><span class="st-label">Comment</span></button></li>
-        <li><button type="button" class="st-dot" role="tab" id="st-tab-1" aria-controls="st-panel" data-icon="🖱️" data-title="Click Reuse" data-text="Click the Reuse button in the Reuse column of the work package."><span class="st-num">2</span><span class="st-label">Reuse</span></button></li>
-        <li><button type="button" class="st-dot" role="tab" id="st-tab-2" aria-controls="st-panel" data-icon="🏢" data-title="Select the destination" data-text="Choose the affiliate board where the work package should be copied."><span class="st-num">3</span><span class="st-label">Destination</span></button></li>
-        <li><button type="button" class="st-dot" role="tab" id="st-tab-3" aria-controls="st-panel" data-icon="⏳" data-title="Wait a few seconds" data-text="Give it a few seconds to finish. The new work package will be yours, automatically assigned to you."><span class="st-num">4</span><span class="st-label">Wait</span></button></li>
-      </ol>
-      <div class="st-panel" id="st-panel" role="tabpanel" aria-live="polite" aria-labelledby="st-tab-0">
-        <div class="st-icon" aria-hidden="true">💬</div>
-        <div class="st-body"><h4>Comment “reuse”</h4><p>Open the work package and add a comment with the word “reuse”.</p></div>
-      </div>
-      <div class="st-ctrl">
-        <button type="button" class="st-btn" id="st-prev">← Back</button>
-        <span class="st-count" id="st-count">Step 1 of 4</span>
-        <button type="button" class="st-btn primary" id="st-next">Next →</button>
-      </div>
-    </div>
-    <a class="btn" target="_blank" rel="noopener noreferrer" href="https://docs.google.com/presentation/d/1KYDRPf6L47uajrFbbfSrq4BgUOsU1loRFZW8nb4ft0k/edit?slide=id.p#slide=id.p"><span aria-hidden="true">📊</span> Open the Reuse Presentation (Google Slides) →</a>
-  </article>
-
 </section>
 
 
