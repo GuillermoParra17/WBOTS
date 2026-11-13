@@ -187,6 +187,16 @@ footer{margin-left:240px;background:rgba(255,255,255,.95);padding:2rem 3rem;text
 
 
 
+/* Keep-up-to-date reminder */
+.remind{display:flex;gap:1rem;align-items:flex-start;background:linear-gradient(135deg,rgba(252,180,0,.14),rgba(252,180,0,.05));border:1px solid rgba(252,180,0,.5);border-radius:12px;padding:1rem 1.25rem;margin-bottom:1.5rem}
+.remind .ic{font-size:1.6rem;line-height:1.2}
+.remind p{color:var(--muted);font-size:.92rem;margin:0}
+.remind strong{color:var(--text)}
+.remind a{font-weight:600}
+.keepup{border-left:4px solid #FCB400}
+.keepup ul{margin:.5rem 0 0 1.2rem;color:var(--muted);font-size:.92rem}
+.keepup li{padding:.15rem 0}
+
 /* What's new banner and update log */
 .whatsnew{display:flex;align-items:center;gap:.9rem;flex-wrap:wrap;padding:.75rem 3rem;background:linear-gradient(135deg,var(--blue),var(--blue-d));color:#fff;font-size:.9rem}
 .wn-badge{background:#fff;color:var(--blue);border-radius:20px;padding:.15rem .7rem;font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
@@ -317,8 +327,8 @@ footer{margin-left:240px;background:rgba(255,255,255,.95);padding:2rem 3rem;text
 
 <aside class="whatsnew" aria-label="Latest update">
   <span class="wn-badge">New</span>
-  <span class="wn-text"><time datetime="2026-10">Oct 2026</time> · <strong>Work Package Reuse is ready</strong> — copy a work package to another affiliate in four steps.</span>
-  <a href="#announcements">See how →</a>
+  <span class="wn-text"><time datetime="2026-11">Nov 2026</time> · <strong>Please update your work packages</strong> — owners of work packages with no update in more than 30 days will receive an email reminder.</span>
+  <a href="#keep-updated">Learn more →</a>
 </aside>
 
 <header class="hero">
@@ -350,6 +360,15 @@ footer{margin-left:240px;background:rgba(255,255,255,.95);padding:2rem 3rem;text
 
 <section class="block" id="announcements">
   <h2>Announcements &amp; Update Log</h2>
+  <div class="card static keepup" id="keep-updated">
+    <h4><span aria-hidden="true">⏰</span> Keeping your work packages up to date</h4>
+    <p style="color:var(--muted);font-size:.92rem">Up-to-date work packages keep the Tech Suite a reliable single source of truth. To help, we will send an <strong>email reminder</strong> to the owners of any work package that has had <strong>no update for more than 30 days</strong>.</p>
+    <ul>
+      <li>Add a comment, or update the status, milestones or HWWK.</li>
+      <li>If the work package is finished, mark it as Completed.</li>
+      <li>If you are not the right owner any more, ask your Super User to reassign it.</li>
+    </ul>
+  </div>
   <p class="log-intro">Newest first. Every update stays here as a record of what changed and when.</p>
 
   <h3 class="log-month">October 2026</h3>
@@ -630,7 +649,7 @@ footer{margin-left:240px;background:rgba(255,255,255,.95);padding:2rem 3rem;text
 </section>
 </main>
 
-<footer>Last updated: October 2026 | WBO Tech Suite — Roche Pharma International</footer>
+<footer>Last updated: November 2026 | WBO Tech Suite — Roche Pharma International</footer>
 
 
 <script>
